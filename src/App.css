@@ -1,0 +1,31 @@
+.App {
+  text-align: center;
+}
+
+li {
+  list-style: none;
+}
+
+nav {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.nav-list li {
+  margin: 10px 20px;
+  text-decoration: none;
+}
+
+.nav-active {
+  background: red;
+  padding: 30px;
+}
