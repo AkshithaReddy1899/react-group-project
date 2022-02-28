@@ -22,10 +22,13 @@ nav {
 
 .nav-list li {
   margin: 10px 20px;
-  text-decoration: none;
 }
 
-.nav-active {
-  background: red;
-  padding: 30px;
+.nav-item {
+  text-decoration: none;
+  color: black;
+}
+
+.active {
+  text-decoration: underline;
 }
