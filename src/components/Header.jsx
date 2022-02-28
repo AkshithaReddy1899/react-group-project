@@ -7,7 +7,7 @@ const Header = () => (
     <img
       src={logo}
       alt="Planets logo"
-      style={{ height: '80px', width: '80px' }}
+      style={{ height: '40px', width: '40px' }}
     />
     <ul className="nav-list">
       <li>
