@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Table from 'react-bootstrap/Table';
 import { getMissionsFromAPI } from '../../redux/missions/missions';
@@ -7,17 +7,24 @@ const MissionsPage = () => {
   const missions = useSelector((state) => state.missionsReducer);
   const dispatch = useDispatch();
 
+  const [member, setMember] = useState('Not a member');
+
+  const handleMember = (mission, e) => {
+    if (mission.mission_id === e.target.id) {
+      setMember('Active Member');
+    }
+  };
+
   useEffect(() => {
     dispatch(getMissionsFromAPI());
   }, []);
 
   return (
     <div>
-      <h1>missions statement</h1>
+      <h1>Missions Statement</h1>
       <Table>
         <thead>
           <tr>
-            <th>#</th>
             <th>Missions</th>
             <th>Description</th>
             <th>Status</th>
@@ -26,12 +33,17 @@ const MissionsPage = () => {
         <tbody>
           {missions.map((mission) => (
             <tr key={mission.mission_id}>
-              <td>1</td>
               <td>{mission.mission_name}</td>
               <td>{mission.description}</td>
-              <td>Not a Member</td>
+              <td>{member}</td>
               <td>
-                <button type="button">Join Mission</button>
+                <button
+                  id={mission.mission_id}
+                  onClick={(e) => handleMember(mission, e)}
+                  type="button"
+                >
+                  Join Mission
+                </button>
               </td>
             </tr>
           ))}
