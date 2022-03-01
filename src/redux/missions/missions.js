@@ -8,8 +8,8 @@ const getMissions = (payload) => ({
 export const getMissionsFromAPI = () => async (dispatch) => {
   dispatch(
     getMissions(
-      await (await fetch('https://api.spacexdata.com/v3/missions')).json(),
-    ),
+      await (await fetch('https://api.spacexdata.com/v3/missions')).json()
+    )
   );
 };
 
