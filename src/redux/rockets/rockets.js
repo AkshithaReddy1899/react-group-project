@@ -17,6 +17,7 @@ export const fetchDataFromApi = () => async (dispatch) => {
     .then((response) => response.json())
     .then((data) => {
       Object.entries(data).forEach(([key, value]) => {
+        console.log(value);
         const rocket = [];
         rocket.key = key;
         rocket.id = value.id;

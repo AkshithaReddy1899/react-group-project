@@ -6,8 +6,6 @@ import './rockets.css';
 const RocketsPage = () => {
   const dispatch = useDispatch();
   const rockets = useSelector((state) => state.rockets);
-  console.log(rockets);
-  console.log(typeof rockets);
   useEffect(() => {
     if (!rockets.length) {
       dispatch(fetchDataFromApi());
