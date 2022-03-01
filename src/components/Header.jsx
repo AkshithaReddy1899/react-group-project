@@ -11,13 +11,19 @@ const Header = () => (
     />
     <ul className="nav-list">
       <li>
-        <NavLink exact to="/" activeClassName="active">Rockets</NavLink>
+        <NavLink exact to="/" activeClassName="active">
+          Rockets
+        </NavLink>
       </li>
       <li>
-        <NavLink to="/mission" activeClassName="active">Missions</NavLink>
+        <NavLink to="/mission" activeClassName="active">
+          Missions
+        </NavLink>
       </li>
       <li>
-        <NavLink to="/profile" activeClassName="active">Profile</NavLink>
+        <NavLink to="/profile" activeClassName="active">
+          Profile
+        </NavLink>
       </li>
     </ul>
   </nav>
