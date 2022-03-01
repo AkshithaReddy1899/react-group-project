@@ -13,9 +13,7 @@ const RocketsPage = () => {
   }, []);
 
   console.log(rockets);
-  return (
-    <div>Rockets</div>
-  );
+  return <div>Rockets</div>;
 };
 
 export default RocketsPage;
