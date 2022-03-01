@@ -16,7 +16,7 @@ const missionStore = (state = [], action) => {
     case JOIN_MISSION:
       return [...state, action.payload];
     case LEAVE_MISSION:
-      return [...state.filter((mission) => mission.id !== mission.mission_id)];
+      return [...state.filter((mission) => mission.id !== action.payload)];
     default:
       return state;
   }
