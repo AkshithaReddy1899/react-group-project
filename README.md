@@ -10,8 +10,7 @@ This Branch is created to fetch rockets data from spaceXdata api and dispatch an
 
 ## Screenshot
 
-![image](https://no-image.png)
-`Current screenshot`
+![rocket](https://user-images.githubusercontent.com/70577783/156157997-58a7696f-6a22-405b-a212-aac6748bbc17.png)
 
 ## Live Demo
 
