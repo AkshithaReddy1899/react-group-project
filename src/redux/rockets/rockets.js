@@ -17,15 +17,15 @@ export const fetchDataFromApi = () => async (dispatch) => {
     .then((response) => response.json())
     .then((data) => {
       Object.entries(data).forEach(([key, value]) => {
-        const rocket = {};
+        const rocket = [];
         rocket.key = key;
         rocket.id = value.id;
         rocket.name = value.rocket_name;
+        rocket.description = value.description;
         rocket.type = value.engines.type;
         rocket.images = value.flickr_images;
-        console.log(rocket);
+        dispatch(fetchData(rocket));
       });
-      dispatch(fetchData(data));
     });
 };
 
