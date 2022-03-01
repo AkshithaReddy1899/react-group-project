@@ -4,6 +4,9 @@
 
 A scientific company webapp for booking a rocket and joining missions built with React, Redux and [API](https://api.spacexdata.com).
 
+## Branch Description 
+ This Branch is created to fetch rockets data from spaceXdata api and dispatch an action to store selected data in redux store.
+
 ## Screenshot
 
 ![image](https://no-image.png)
