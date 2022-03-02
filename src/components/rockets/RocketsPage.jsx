@@ -21,8 +21,8 @@ const RocketsPage = () => {
   };
 
   return (
-    <section>
-      <hr className="rockets-hr" />
+    <section className="rockets">
+      <hr />
       <ul>
         {
           rockets.map((rocket) => (

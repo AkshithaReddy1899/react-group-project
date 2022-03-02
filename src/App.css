@@ -70,8 +70,35 @@ nav {
   text-decoration: underline;
 }
 
+hr {
+  width: 95%;
+  margin: 5px auto;
+  border: none;
+  border-top: 1px solid grey;
+}
+
 .profile {
+  min-height: 150px;
   display: flex;
   justify-content: space-around;
-  align-items: center;
+}
+
+.rocket-profile {
+  text-align: left;
+  width: 300px;
+}
+
+.rocket-profile h2 {
+  margin: 25px auto;
+}
+
+.rocket-profile ul {
+  margin: 3px;
+  text-align: center;
+  margin: 20px auto;
+}
+
+.rocket-profile li {
+  border: 1px solid grey;
+  padding: 10px;
 }

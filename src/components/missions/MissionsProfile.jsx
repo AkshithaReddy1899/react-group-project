@@ -6,7 +6,7 @@ const MissionsProfile = () => {
 
   return (
     <div className="rocket-profile">
-      <h3>My Missions</h3>
+      <h2>My Missions</h2>
       <ul>
         {allMissions.map((mission) => (
           <li key={mission.id}>

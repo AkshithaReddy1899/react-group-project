@@ -8,18 +8,3 @@
 .mission-margin {
   margin: -8px 1.8% 0;
 }
-
-.rocket-profile {
-  text-align: left;
-  width: 300px;
-}
-
-.rocket-profile ul {
-  text-align: center;
-  margin: 20px auto;
-}
-
-.rocket-profile li {
-  border: 1px solid grey;
-  padding: 10px;
-}
