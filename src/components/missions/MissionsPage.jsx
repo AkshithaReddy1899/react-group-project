@@ -14,8 +14,7 @@ const MissionsPage = () => {
   }, []);
 
   return (
-    <div>
-      <h1>Missions Statement</h1>
+    <div className="mission-margin">
       <Table striped bordered hover>
         <thead>
           <tr>
