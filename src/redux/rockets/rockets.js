@@ -54,6 +54,13 @@ const reducer = (state = initialState, action) => {
         }
         return { ...rocket, reserved: true };
       });
+    case CANCEL_ROCKET:
+      return state.map((rocket) => {
+        if (rocket.id === action.payload) {
+          return { ...rocket, reserved: false };
+        }
+        return rocket;
+      });
     default:
       return state;
   }
