@@ -5,7 +5,7 @@ const MissionsProfile = () => {
   const allMissions = useSelector((state) => state.missionStore);
 
   return (
-    <div>
+    <div className="rocket-profile">
       <h3>My Missions</h3>
       <ul>
         {allMissions.map((mission) => (
