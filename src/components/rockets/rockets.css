@@ -66,3 +66,18 @@ button {
   color: #000;
   box-shadow: 1px 1px 1px 1px rgb(153, 153, 153);
 }
+
+.rocket-profile {
+  text-align: left;
+  width: 300px;
+}
+
+.rocket-profile ul {
+  text-align: center;
+  margin: 20px auto;
+}
+
+.rocket-profile li {
+  border: 1px solid grey;
+  padding: 10px;
+}

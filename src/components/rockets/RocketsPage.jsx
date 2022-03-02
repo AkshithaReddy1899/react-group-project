@@ -12,14 +12,12 @@ const RocketsPage = () => {
     }
   }, []);
 
-  rockets.map((rocket) => console.log(typeof (rocket)));
+  const handleReserve = (e) => {
+    dispatch(reserveRocket(e.target.id));
+  };
 
-  const handleClick = (e) => {
-    rockets.map((rocket) => (
-      (!rocket.reserved)
-        ? dispatch(reserveRocket(e.target.id))
-        : dispatch(cancelRocket(e.target.id))
-    ));
+  const handleCancel = (e) => {
+    dispatch(cancelRocket(e.target.id));
   };
 
   return (
@@ -44,8 +42,8 @@ const RocketsPage = () => {
                 </p>
                 {
                 (rocket.reserved)
-                  ? <button type="button" className="cancel-btn" onClick={handleClick} id={rocket.id}>Cancel</button>
-                  : <button type="button" className="reserve-btn" onClick={handleClick} id={rocket.id}>Reserved</button>
+                  ? <button type="button" className="cancel-btn" onClick={handleCancel} id={rocket.id}>Cancel</button>
+                  : <button type="button" className="reserve-btn" onClick={handleReserve} id={rocket.id}>Reserved</button>
                 }
               </div>
             </li>
