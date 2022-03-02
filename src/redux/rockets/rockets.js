@@ -1,10 +1,16 @@
 const FETCH_DATA = 'spaceX/rockets/FETCH_DATA';
+const RESERVE_ROCKET = 'spaceX/rockets/RESERVE_ROCKET';
 
 const initialState = [];
 
 export const fetchData = (data) => ({
   type: FETCH_DATA,
   payload: data,
+});
+
+export const reserveRocket = (id) => ({
+  type: RESERVE_ROCKET,
+  payload: id,
 });
 
 export const fetchDataFromApi = () => async (dispatch) => {
@@ -35,6 +41,13 @@ const reducer = (state = initialState, action) => {
   switch (action.type) {
     case FETCH_DATA:
       return [...state, action.payload];
+    case RESERVE_ROCKET:
+      return state.map((rocket) => {
+        if (rocket.id !== parseInt(action.payload, 10)) {
+          return rocket;
+        }
+        return { ...rocket, reserved: true };
+      });
     default:
       return state;
   }
