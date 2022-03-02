@@ -8,9 +8,9 @@ const MissionsProfile = () => {
     <div>
       <h3>My Missions</h3>
       <ul>
-        {allMissions.map((missions) => (
-          <li key={missions.mission_id}>
-            <p>{missions.mission_name}</p>
+        {allMissions.map((mission) => (
+          <li key={mission.id}>
+            <p>{mission.mission_name}</p>
           </li>
         ))}
       </ul>
