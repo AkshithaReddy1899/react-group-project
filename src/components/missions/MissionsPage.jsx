@@ -16,7 +16,7 @@ const MissionsPage = () => {
   return (
     <div>
       <h1>Missions Statement</h1>
-      <Table>
+      <Table striped bordered hover>
         <thead>
           <tr>
             <th>Missions</th>
