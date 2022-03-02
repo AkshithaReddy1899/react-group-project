@@ -56,7 +56,7 @@ const reducer = (state = initialState, action) => {
       });
     case CANCEL_ROCKET:
       return state.map((rocket) => {
-        if (rocket.id === action.payload) {
+        if (rocket.id === parseInt(action.payload, 10)) {
           return { ...rocket, reserved: false };
         }
         return rocket;
