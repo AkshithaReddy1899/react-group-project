@@ -69,3 +69,9 @@ nav {
 .active {
   text-decoration: underline;
 }
+
+.profile {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}

@@ -1,7 +1,6 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchDataFromApi } from '../../redux/rockets/rockets';
-import Rocket from './Rocket';
+import { fetchDataFromApi, reserveRocket, cancelRocket } from '../../redux/rockets/rockets';
 import './rockets.css';
 
 const RocketsPage = () => {
@@ -13,12 +12,42 @@ const RocketsPage = () => {
     }
   }, []);
 
+  const handleReserve = (e) => {
+    dispatch(reserveRocket(e.target.id));
+  };
+
+  const handleCancel = (e) => {
+    dispatch(cancelRocket(e.target.id));
+  };
+
   return (
     <section>
       <hr className="rockets-hr" />
       <ul>
         {
-        rockets.map((rocket) => <Rocket key={rocket.id} rocket={rocket} />)
+          rockets.map((rocket) => (
+            <li key={rocket.id} className="rocket-item">
+              <img
+                src={rocket.images[0]}
+                alt={rocket.name}
+                className="rocket-img"
+              />
+              <div className="rocket-data">
+                <h1>{rocket.name}</h1>
+                <p>
+                  <span className="reserved">
+                    {(rocket.reserved) ? 'Reserved' : ' ' }
+                  </span>
+                  {rocket.description}
+                </p>
+                {
+                (rocket.reserved)
+                  ? <button type="button" className="cancel-btn" onClick={handleCancel} id={rocket.id}>Cancel</button>
+                  : <button type="button" className="reserve-btn" onClick={handleReserve} id={rocket.id}>Reserved</button>
+                }
+              </div>
+            </li>
+          ))
         }
       </ul>
     </section>
