@@ -18,15 +18,23 @@ const MissionsPage = () => {
       <Table striped bordered hover>
         <thead>
           <tr>
-            <th>Missions</th>
-            <th>Description</th>
-            <th>Status</th>
+            <th>
+              <h4>Missions</h4>
+            </th>
+            <th>
+              <h4>Description</h4>
+            </th>
+            <th>
+              <h4>Status</h4>
+            </th>
           </tr>
         </thead>
         <tbody>
           {missions.map((mission) => (
             <tr key={mission.mission_id}>
-              <td>{mission.mission_name}</td>
+              <td>
+                <h6>{mission.mission_name}</h6>
+              </td>
               <td>{mission.description}</td>
               <td>
                 <MissionMember
