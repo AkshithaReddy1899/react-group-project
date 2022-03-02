@@ -1,5 +1,6 @@
 const FETCH_DATA = 'spaceX/rockets/FETCH_DATA';
 const RESERVE_ROCKET = 'spaceX/rockets/RESERVE_ROCKET';
+const CANCEL_ROCKET = 'spaceX/rockets/CANCEL_ROCKET';
 
 const initialState = [];
 
@@ -10,6 +11,11 @@ export const fetchData = (data) => ({
 
 export const reserveRocket = (id) => ({
   type: RESERVE_ROCKET,
+  payload: id,
+});
+
+export const cancelRocket = (id) => ({
+  type: CANCEL_ROCKET,
   payload: id,
 });
 
@@ -47,6 +53,13 @@ const reducer = (state = initialState, action) => {
           return rocket;
         }
         return { ...rocket, reserved: true };
+      });
+    case CANCEL_ROCKET:
+      return state.map((rocket) => {
+        if (rocket.id === parseInt(action.payload, 10)) {
+          return { ...rocket, reserved: false };
+        }
+        return rocket;
       });
     default:
       return state;
