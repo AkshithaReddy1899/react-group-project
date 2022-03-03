@@ -4,13 +4,9 @@
 
 A scientific company webapp for booking a rocket and joining missions built with React, Redux and [API](https://api.spacexdata.com).
 
-## Screenshot
+## Gif Demo
 
-![rocket](https://user-images.githubusercontent.com/70577783/156157997-58a7696f-6a22-405b-a212-aac6748bbc17.png)
-
-## Live Demo
-
-View the [Coming Soon...](https://placeholder) here ☕
+![react group project](https://user-images.githubusercontent.com/27709832/156524016-843273f6-0053-454b-8b59-3b298bb4c9ae.gif)
 
 ## Built With
 
