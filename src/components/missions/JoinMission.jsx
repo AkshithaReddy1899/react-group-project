@@ -46,11 +46,12 @@ const JoinMission = ({ joinId, missionName }) => {
 
   return (
     <div>
-      {res === true ? (
+      {res && (
         <Button id={joinId} onClick={removeMission} variant="danger">
           Leave Mission
         </Button>
-      ) : (
+      )}
+      {!res && (
         <Button id={joinId} onClick={joinedMission} variant="success">
           Join Mission
         </Button>
