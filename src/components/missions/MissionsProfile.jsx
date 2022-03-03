@@ -8,11 +8,13 @@ const MissionsProfile = () => {
     <div className="rocket-profile">
       <h2>My Missions</h2>
       <ul>
-        {allMissions.map((mission) => (
-          <li key={mission.id}>
-            <p>{mission.mission_name}</p>
-          </li>
-        ))}
+        {allMissions.length === 0 ? (
+          <p>No Missions Joined</p>
+        ) : (
+          allMissions.map((mission) => (
+            <li key={mission.id}>{mission.mission_name}</li>
+          ))
+        )}
       </ul>
     </div>
   );
