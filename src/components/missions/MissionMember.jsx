@@ -14,11 +14,8 @@ const MissionMember = ({ joinId }) => {
 
   return (
     <div>
-      {res === true ? (
-        <p className="success">Active Member</p>
-      ) : (
-        <p className="danger">Not a Member</p>
-      )}
+      {res && <p className="success">Active Member</p>}
+      {!res && <p className="danger">Not a Member</p>}
     </div>
   );
 };
