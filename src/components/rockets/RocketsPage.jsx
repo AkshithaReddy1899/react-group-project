@@ -40,11 +40,12 @@ const RocketsPage = () => {
                   </span>
                   {rocket.description}
                 </p>
-                {
-                (rocket.reserved)
-                  ? <button type="button" className="cancel-btn" onClick={handleCancel} id={rocket.id}>Cancel</button>
-                  : <button type="button" className="reserve-btn" onClick={handleReserve} id={rocket.id}>Reserved</button>
-                }
+                {(rocket.reserved) && (
+                  <button type="button" className="cancel-btn" onClick={handleCancel} id={rocket.id}>Cancel</button>
+                )}
+                {(!rocket.reserved) && (
+                <button type="button" className="reserve-btn" onClick={handleReserve} id={rocket.id}>Reserved</button>
+                )}
               </div>
             </li>
           ))
